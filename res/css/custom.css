@@ -48,7 +48,7 @@
     border-radius: 0;
 }
 main{
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgb(56,57,58);
     
 }
 main .lead{
@@ -56,11 +56,15 @@ main .lead{
 }
 
 .bigtext{
+    background-color: rgba(0,0,0, 0.75);
     background-blend-mode: darken;
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin: 0;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
 }
 
 .card-tile .card-body{

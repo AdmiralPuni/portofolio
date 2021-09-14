@@ -7,6 +7,35 @@
     border-radius: 0 !important;
 }
 
+.card-body{
+    min-height: 128px;
+}
+
+.toolbar{
+    border-bottom: 1px solid #0dcaf0;
+    
+    margin-bottom: 20px;
+}
+.toolbar .col{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.toolbar-center{
+    border-left: 1px solid #0dcaf0;
+    border-right: 1px solid #0dcaf0;
+}
+
+.input-group-text, .form-control{
+    border-radius: 0 !important;
+    background-color: transparent;
+    color:white;
+}
+
+.album{
+    padding-top: 0 !important;
+}
+
 .bg-transparent{
     background-color: transparent !important;
 }
@@ -22,10 +51,6 @@ main{
 }
 main .lead{
     color: #0dcaf0 !important;
-}
-
-.card-tile{
-
 }
 
 .card-tile .card-body{

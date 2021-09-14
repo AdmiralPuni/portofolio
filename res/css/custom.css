@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Whiterabbit";
+    src: url(../fonts/whitrabt.ttf) format("truetype");
+  }
+
 .card-footer{
     border-top: 1px solid #0dcaf0;
 }
@@ -9,6 +14,10 @@
 
 .card-body{
     min-height: 128px;
+}
+
+.card-header{
+    font-family: "Whiterabbit" !important;
 }
 
 .toolbar{

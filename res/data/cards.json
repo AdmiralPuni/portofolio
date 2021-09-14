@@ -1,0 +1,7 @@
+{
+    "title": "Test JSON",
+    "thumbnail": "res/images/cards/video_editing.jpg",
+    "description_en": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+    "tools": "MySql Access MSSQL"
+}

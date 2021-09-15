@@ -6,8 +6,12 @@
             "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
             "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
             "status": "CONFIDENTIAL",
-            "link": "",
-            "github": ""
+            "link": {
+                "gallery": "#",
+                "github": "#",
+                "website": "https://modularserver.000webhostapp.com/",
+                "youtube": "https://www.youtube.com/feed/subscriptions"
+            }
         },
         {
             "title": "Desktop Programming",
@@ -15,17 +19,25 @@
             "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
             "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
             "status": "PUBLIC",
-            "link": "",
-            "github": ""
+            "link": {
+                "gallery": "#",
+                "github": "#",
+                "website": "https://modularserver.000webhostapp.com/",
+                "youtube": "https://www.youtube.com/feed/subscriptions"
+            }
         },
         {
-            "title": "Desktop Programming",
+            "title": "Diagnosis+ Disease Weighing System",
             "thumbnail": "res/images/web_programming/diagnosis.PNG",
             "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
             "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
             "status": "UNDOCUMENTED",
-            "link": "",
-            "github": ""
+            "link": {
+                "gallery": "#",
+                "github": "#",
+                "website": "https://modularserver.000webhostapp.com/",
+                "youtube": "https://www.youtube.com/feed/subscriptions"
+            }
         }
     ],
     "tech_support": [
@@ -35,8 +47,12 @@
             "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
             "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
             "status": "CONFIDENTIAL",
-            "link": "",
-            "github": ""
+            "link": {
+                "gallery": "%",
+                "github": "#",
+                "website": "https://modularserver.000webhostapp.com/",
+                "youtube": "https://www.youtube.com/feed/subscriptions"
+            }
         }
     ] 
 }

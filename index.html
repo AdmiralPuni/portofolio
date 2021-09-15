@@ -94,6 +94,8 @@
                                     class="bi bi-youtube"></i> YouTube</button></a>
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-globe"></i> Website</button></a>
+                        <button type="button" class="btn btn-md btn-outline-light" onclick="load_works('web_programming')"><i
+                            class="bi bi-discord"></i> TEST</button>
                     </div>
                     <div class="col">
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
@@ -253,10 +255,16 @@
     <script src="res/js/bootstrap.min.js"></script>
     <script>
         var cards;
+        var works;
+
+        var current_category;
 
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/cards.json', function (data) {
             cards = data;
             //load();
+        });
+        $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/works.json', function (data) {
+            works = data;
         });
 
 
@@ -276,7 +284,7 @@
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-light"><i
+                                        <button type="button" class="btn btn-sm btn-outline-light" onclick="load_works('` + item.title.replace(" ", "_").toLowerCase() + `')"><i
                                                 class="bi bi-file-earmark-text"></i> View</button>
                                     </div>
                                     <small class="text text-info">` + item.tools + `</small>
@@ -303,6 +311,76 @@
             });
         }
 
+        function load_works(category){
+            hide();
+            var temp = get_works_category(category);
+            current_category = category;
+            $('#card-content').html('');
+            $.each(temp, function (i, item) {
+                $('#card-content').append(`
+                    <div class="col" id="card-` + i + `">
+                        <div class="card shadow-sm text-white bg-dark">
+                            <div class="card-header">` + item.title + `</div>
+                            <img src="` + item.thumbnail + `" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text" id="card-works-description-` + i + `">` + item.description_en + `</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        ` + create_button(item.link) + `
+                                    </div>
+                                    <small class="text text-` + status_color(item.status) + `">` + item.status + `</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            });
+        }
+
+        function status_color(status){
+            if(status == 'PUBLIC'){
+                return 'success';
+            }
+            else if(status == 'UNDOCUMENTED'){
+                return 'warning';
+            }
+            else if(status == 'CONFIDENTIAL'){
+                return 'danger';
+            }
+            else{
+                return 'info';
+            }
+        }
+
+        function get_works_category(category){
+            if(category == 'web_programming'){
+                return works.web_programming;
+            }
+            else if(category == 'tech_support'){
+                return works.tech_support;
+            }
+        }
+
+        function create_button(link){
+            var hypertext = '';
+            if(link.gallery != '#'){
+                hypertext += `<button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-gallery"></i> Gallery</button>`;
+            }
+            if(link.github != '#'){
+                hypertext += `<a href="` + link.github + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>`;
+            }
+            if(link.website != '#'){
+                hypertext += `<a href="` + link.website + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> Website</button></a>`;
+            }
+            if(link.youtube != '#'){
+                hypertext += `<a href="` + link.youtube + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i> Youtube</button></a>`;
+            }
+            return hypertext;
+        }
+
         $('#language').on('change', function () {
             if (this.value == 'EN') {
                 $.each(cards, function (i, item) {
@@ -310,12 +388,22 @@
                     $('#card-description-' + i).hide();
                     $('#card-description-' + i).fadeIn(300);
                 });
+                $.each(get_works_category(current_category), function (i, item) {
+                    $('#card-works-description-' + i).html(item.description_en);
+                    $('#card-works-description-' + i).hide();
+                    $('#card-works-description-' + i).fadeIn(300);
+                });
             }
             else if (this.value == 'ID') {
                 $.each(cards, function (i, item) {
                     $('#card-description-' + i).html(item.description_id);
                     $('#card-description-' + i).hide();
                     $('#card-description-' + i).fadeIn(300);
+                });
+                $.each(get_works_category(current_category), function (i, item) {
+                    $('#card-works-description-' + i).html(item.description_id);
+                    $('#card-works-description-' + i).hide();
+                    $('#card-works-description-' + i).fadeIn(300);
                 });
             }
         });

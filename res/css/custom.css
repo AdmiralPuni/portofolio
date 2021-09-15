@@ -105,3 +105,6 @@ main .lead{
 .text-success{
     color: limegreen !important;
 }
+.text-warning{
+    color: yellow !important;
+}

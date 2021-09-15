@@ -367,16 +367,16 @@
         function create_button(link){
             var hypertext = '';
             if(link.gallery != '#'){
-                hypertext += `<button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-gallery"></i> Gallery</button>`;
+                hypertext += `<a href="` + link.gallery + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-picture"></i> Gallery</button></a>`;
             }
             if(link.github != '#'){
-                hypertext += `<a href="` + link.github + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>`;
+                hypertext += `<a href="` + link.github + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>`;
             }
             if(link.website != '#'){
-                hypertext += `<a href="` + link.website + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> Website</button></a>`;
+                hypertext += `<a href="` + link.website + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> Website</button></a>`;
             }
             if(link.youtube != '#'){
-                hypertext += `<a href="` + link.youtube + `"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i> Youtube</button></a>`;
+                hypertext += `<a href="` + link.youtube + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i> Youtube</button></a>`;
             }
             return hypertext;
         }

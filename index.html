@@ -76,7 +76,7 @@
     <main>
         <div class="row py-5 text-center bigtext text-white">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">NCC-7465 Housefire</h1>
+                <h1 class="fw-light">Swiss Army Knife</h1>
                 <p class="lead text-muted">Something short and leading about the collection below—its contents, the
                     creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
                     entirely.</p>
@@ -177,6 +177,72 @@
                         </div>
                     </div>
                 </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3" id="card-content">
+                    <div class="col">
+                        <div class="card shadow-sm text-white bg-dark">
+                            <div class="card-header">Office Internal Memo System</div>
+                            <img src="res/images/web_programming/iom.png" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Website to order memos around the office according to the
+                                    department of the requester, the memo requires to be
+                                    approved by user with level 1 and level 2 clearance timestamp is generated when both
+                                    is cleared. Items of
+                                    the memo is managed by the administrator.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-light"><i
+                                                class="bi bi-file-earmark-text"></i> View</button>
+                                    </div>
+                                    <small class="text text-danger">CONFIDENTIAL</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm text-white bg-dark">
+                            <div class="card-header">Modular Website for IoT System</div>
+                            <img src="res/images/web_programming/modweb.PNG" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Created to receive and process data, sending commands to the IoT
+                                    Device, the device will check regularly for new command once finished it will send
+                                    an affirmation to the webserver to be tagged as finished. Supports graphs and other
+                                    display system for sensor data.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>
+                                        <a href="https://modularserver.000webhostapp.com/" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> View Website</button></a>
+                                    </div>
+                                    <small class="text text-success">PUBLIC</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm text-white bg-dark">
+                            <div class="card-header">Diagnosis+ Disease Weighing System</div>
+                            <img src="res/images/web_programming/diagnosis.PNG" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Created to receive and process data, sending commands to the IoT
+                                    Device, the device will check regularly for new command once finished it will send
+                                    an affirmation to the webserver to be tagged as finished. Supports graphs and other
+                                    display system for sensor data.</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-light"><i
+                                            class="bi bi-file-earmark-text"></i> View</button>
+                                    </div>
+                                    <small class="text text-info">UNDOCUMENTED</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -196,12 +262,12 @@
     <script src="res/js/bootstrap.min.js"></script>
     <script>
         var cards;
-        
+
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/cards.json', function (data) {
             cards = data;
-            load();
+            //load();
         });
-        
+
 
         function load() {
             var delay = 0;

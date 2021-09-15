@@ -94,3 +94,10 @@ main .lead{
 .bg-dark{
     background-color: rgb(26, 27, 28) !important;
 }
+
+.text-danger{
+    color: red !important;
+}
+.text-success{
+    color: limegreen !important;
+}

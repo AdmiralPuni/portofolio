@@ -101,7 +101,9 @@
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-discord"></i> Discord</button></a>
                         <button type="button" class="btn btn-md btn-outline-light" onclick="load()"><i
-                                class="bi bi-discord"></i> LOAD JSON</button>
+                                class="bi bi-discord"></i> LOAD</button>
+                        <button type="button" class="btn btn-md btn-outline-light" onclick="hide()"><i
+                            class="bi bi-discord"></i> HIDE</button>
                     </div>
                     <div class="col">
                         <div class="input-group">
@@ -117,7 +119,7 @@
                 </div>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="card-container">
                     <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
+                        <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
                             <img src="res/images/cards/temp.jpg" alt="">
 
@@ -137,7 +139,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
+                        <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
                             <img src="res/images/cards/temp.jpg" alt="">
 
@@ -157,7 +159,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
+                        <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
                             <img src="res/images/cards/temp.jpg" alt="">
 
@@ -177,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3" id="card-content">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 card-content" id="card-content">
                     <div class="col">
                         <div class="card shadow-sm text-white bg-dark">
                             <div class="card-header">Office Internal Memo System</div>
@@ -247,17 +249,6 @@
         </div>
 
     </main>
-
-    <footer class="text-muted py-5">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                    href="../getting-started/introduction/">getting started guide</a>.</p>
-        </div>
-    </footer>
     <script src="res/js/jquery-3.6.0.min.js"></script>
     <script src="res/js/bootstrap.min.js"></script>
     <script>
@@ -270,7 +261,7 @@
 
 
         function load() {
-            var delay = 0;
+            var delay = 300;
             $('#card-container').html('');
             $.each(cards, function (i, item) {
                 $('#card-container').append(`
@@ -294,9 +285,21 @@
                         </div>
                     </div>
                 `);
-                delay += 330;
+                if(i % 3 == 0){
+                    delay += 300;
+                }
                 $("#card-" + i).hide();
-                $("#card-" + i).fadeIn(delay);
+                $("#card-" + i).slideToggle(delay);
+            });
+        }
+
+        function hide() {
+            var delay = 300;
+            $.each(cards, function (i, item) {
+                if(i % 3 == 0){
+                    delay += 300;
+                }
+                $("#card-" + i).slideToggle(delay);
             });
         }
 

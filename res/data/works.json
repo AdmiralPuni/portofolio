@@ -1,0 +1,42 @@
+{
+    "web_programming" :[
+        {
+            "title": "Office Internal Memo System",
+            "thumbnail": "res/images/web_programming/iom.png",
+            "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
+            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "status": "CONFIDENTIAL",
+            "link": "",
+            "github": ""
+        },
+        {
+            "title": "Desktop Programming",
+            "thumbnail": "res/images/web_programming/modweb.PNG",
+            "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
+            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "status": "PUBLIC",
+            "link": "",
+            "github": ""
+        },
+        {
+            "title": "Desktop Programming",
+            "thumbnail": "res/images/web_programming/diagnosis.PNG",
+            "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
+            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "status": "UNDOCUMENTED",
+            "link": "",
+            "github": ""
+        }
+    ],
+    "tech_support": [
+        {
+            "title": "Tech Support EX",
+            "thumbnail": "res/images/cards/web_programming.jpg",
+            "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
+            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "status": "CONFIDENTIAL",
+            "link": "",
+            "github": ""
+        }
+    ] 
+}

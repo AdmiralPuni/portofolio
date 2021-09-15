@@ -11,6 +11,10 @@
     min-height: 128px;
 }
 
+.card-content{
+    margin-top: 0px !important;
+}
+
 .toolbar{
     border-bottom: 1px solid #0dcaf0;
     

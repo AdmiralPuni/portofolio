@@ -65,7 +65,7 @@ main .lead{
 .bigtext{
     background-color: rgba(0,0,0, 0.75);
     background-blend-mode: darken;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/cards/tech_support.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

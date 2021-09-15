@@ -14,7 +14,7 @@
             }
         },
         {
-            "title": "Desktop Programming",
+            "title": "Modular Website for IoT System",
             "thumbnail": "res/images/web_programming/modweb.PNG",
             "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
             "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",

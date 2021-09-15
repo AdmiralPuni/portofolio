@@ -87,6 +87,7 @@
         <div class="album py-5 bg-dark">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 toolbar">
+                    <!--
                     <div class="col">
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-github"></i> Github</button></a>
@@ -94,21 +95,20 @@
                                     class="bi bi-youtube"></i> YouTube</button></a>
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-globe"></i> Website</button></a>
-                        <button type="button" class="btn btn-md btn-outline-light" onclick="load_works('web_programming')"><i
-                            class="bi bi-discord"></i> TEST</button>
                     </div>
                     <div class="col">
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-twitter"></i> Twitter</button></a>
                         <a href="#"><button type="button" class="btn btn-md btn-outline-light"><i
                                     class="bi bi-discord"></i> Discord</button></a>
-                        <button type="button" class="btn btn-md btn-outline-light" onclick="load()"><i
-                                class="bi bi-discord"></i> LOAD</button>
-                        <button type="button" class="btn btn-md btn-outline-light" onclick="hide()"><i
-                            class="bi bi-discord"></i> HIDE</button>
+                        
                     </div>
+                    -->
                     <div class="col">
+                        
                         <div class="input-group">
+                            <button type="button" class="btn btn-md btn-outline-light" onclick="hide()"><i
+                                class="bi bi-toggles"></i> Toggle Cards</button>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Language</span>
                             </div>
@@ -182,70 +182,7 @@
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 card-content" id="card-content">
-                    <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
-                            <div class="card-header">Office Internal Memo System</div>
-                            <img src="res/images/web_programming/iom.png" alt="">
-                            <div class="card-body">
-                                <p class="card-text">Website to order memos around the office according to the
-                                    department of the requester, the memo requires to be
-                                    approved by user with level 1 and level 2 clearance timestamp is generated when both
-                                    is cleared. Items of
-                                    the memo is managed by the administrator.</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-light"><i
-                                                class="bi bi-file-earmark-text"></i> View</button>
-                                    </div>
-                                    <small class="text text-danger">CONFIDENTIAL</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
-                            <div class="card-header">Modular Website for IoT System</div>
-                            <img src="res/images/web_programming/modweb.PNG" alt="">
-                            <div class="card-body">
-                                <p class="card-text">Created to receive and process data, sending commands to the IoT
-                                    Device, the device will check regularly for new command once finished it will send
-                                    an affirmation to the webserver to be tagged as finished. Supports graphs and other
-                                    display system for sensor data.</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>
-                                        <a href="https://modularserver.000webhostapp.com/" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> View Website</button></a>
-                                    </div>
-                                    <small class="text text-success">PUBLIC</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm text-white bg-dark">
-                            <div class="card-header">Diagnosis+ Disease Weighing System</div>
-                            <img src="res/images/web_programming/diagnosis.PNG" alt="">
-                            <div class="card-body">
-                                <p class="card-text">Created to receive and process data, sending commands to the IoT
-                                    Device, the device will check regularly for new command once finished it will send
-                                    an affirmation to the webserver to be tagged as finished. Supports graphs and other
-                                    display system for sensor data.</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-light"><i
-                                            class="bi bi-file-earmark-text"></i> View</button>
-                                    </div>
-                                    <small class="text text-info">UNDOCUMENTED</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -254,6 +191,7 @@
     <script src="res/js/jquery-3.6.0.min.js"></script>
     <script src="res/js/bootstrap.min.js"></script>
     <script>
+        //ADD LANGUAGE FUNCTION JSON
         var cards;
         var works;
 
@@ -261,7 +199,7 @@
 
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/cards.json', function (data) {
             cards = data;
-            //load();
+            load();
         });
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/works.json', function (data) {
             works = data;
@@ -302,12 +240,23 @@
         }
 
         function hide() {
+            hide_works();
             var delay = 300;
             $.each(cards, function (i, item) {
                 if(i % 3 == 0){
                     delay += 300;
                 }
                 $("#card-" + i).slideToggle(delay);
+            });
+        }
+
+        function hide_works(){
+            var delay = 150;
+            $.each(get_works_category(current_category), function (i, item) {
+                if(i % 2 == 0){
+                    delay += 150;
+                }
+                $("#card-works-" + i).fadeOut(delay);
             });
         }
 
@@ -318,7 +267,7 @@
             $('#card-content').html('');
             $.each(temp, function (i, item) {
                 $('#card-content').append(`
-                    <div class="col" id="card-` + i + `">
+                    <div class="col" id="card-works-` + i + `">
                         <div class="card shadow-sm text-white bg-dark">
                             <div class="card-header">` + item.title + `</div>
                             <img src="` + item.thumbnail + `" alt="">

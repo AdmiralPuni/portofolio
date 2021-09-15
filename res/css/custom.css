@@ -55,6 +55,9 @@ main{
     background-color: rgb(56,57,58);
     
 }
+.album{
+    min-height: 100vh;
+}
 main .lead{
     color: #0dcaf0 !important;
 }

@@ -9,7 +9,7 @@
     },
     {
         "title": "Desktop Programming",
-        "thumbnail": "res/images/cards/temp.jpg",
+        "thumbnail": "res/images/cards/desktop_programming.jpg",
         "description_en": "Rarest art of programming currently practiced, VB.NET is my strongpoint but I can adapt to other language quickly.",
         "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
         "tools": "PHP CI JS",
@@ -17,7 +17,7 @@
     },
     {
         "title": "Tech Support",
-        "thumbnail": "res/images/cards/temp.jpg",
+        "thumbnail": "res/images/cards/tech_support.jpg",
         "description_en": "Component replacement/upgrade of both PC and laptop systems, performing diagnostic on problematic hardware/software.",
         "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
         "tools": "Laptop PC Mobile",
@@ -49,7 +49,7 @@
     },
     {
         "title": "Photo Editing",
-        "thumbnail": "res/images/cards/temp.jpg",
+        "thumbnail": "res/images/cards/photo_editing.jpg",
         "description_en": "Manipulating image to the needs of my client, some unorthodox method might be used with equal results.",
         "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
         "tools": "Adobe Photoshop",
@@ -60,7 +60,15 @@
         "thumbnail": "res/images/cards/document_editing.jpg",
         "description_en": "Creating or modifying document to their specification, etc",
         "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
-        "tools": "Adobe Photoshop",
+        "tools": "Word Excel PowerPoint Libreoffice",
+        "link": ""
+    },
+    {
+        "title": "3D Modelling",
+        "thumbnail": "res/images/cards/photo_editing.jpg",
+        "description_en": "Architectural model, 3D printed models, machine model, etc. Creating model and rendering them to be presented to the masses.",
+        "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+        "tools": "SketchUp FreeCAD",
         "link": ""
     },
     {
@@ -68,7 +76,7 @@
         "thumbnail": "res/images/cards/temp.jpg",
         "description_en": "Manipulating image to the needs of my client, some unorthodox method might be used with equal results.",
         "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
-        "tools": "Adobe Photoshop",
+        "tools": "Hydroponics Aeroponics Aquaponics Traditional",
         "link": ""
     }
 ]

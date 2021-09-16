@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Portofolio | AdmiralPuni</title>
 
     <link rel="stylesheet" href="res/css/bootstrap.min.css">
     <link rel="stylesheet" href="res/icons/bootstrap-icons.css">
@@ -39,17 +39,42 @@
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other
-                            background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.</p>
+                        <p class="text-muted">A single page website to showcase the works the individual has done. All
+                            data in this page is stored in some json files and this website relies heavily on JQuery to
+                            make it work. Further information can be found at this website github repository.
+                        </p>
+                        <hr>
+                        <span class="text-info">GNU General Public License v2.0</span>
+                            
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email me</a></li>
-                        </ul>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 about-buttons">
+                            <div class="col">
+                                <a href="https://github.com/AdmiralPuni" target="_blank"><button type="button" class="btn btn-md btn-outline-light"><i
+                                            class="bi bi-github"></i> Github</button></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" target="_blank"><button type="button" class="btn btn-md btn-outline-light"><i
+                                            class="bi bi-youtube"></i> YouTube</button></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" target="_blank"><button type="button" class="btn btn-md btn-outline-light"><i
+                                            class="bi bi-globe"></i> Website</button></a>
+                            </div>
+                            <div class="col">
+                                <a href="#" target="_blank"><button type="button" class="btn btn-md btn-outline-light"><i
+                                            class="bi bi-twitter"></i> Twitter</button></a>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-md btn-outline-light" id="discord-username"><i
+                                            class="bi bi-discord"></i> Discord</button>
+                            </div>
+                            <div class="col">
+                                <a href="https://github.com/AdmiralPuni/portofolio" target="_blank"><button type="button" class="btn btn-md btn-outline-light"><i
+                                            class="bi bi-github"></i> Repository</button></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,13 +82,7 @@
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a href="#" class="navbar-brand d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-                        viewBox="0 0 24 24">
-                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                        <circle cx="12" cy="13" r="4" />
-                    </svg>
-                    <strong>Hire me</strong>
+                    <span class="header-text fw-bold">Portofolio</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,10 +124,10 @@
                     </div>
                     -->
                     <div class="col">
-                        
+
                         <div class="input-group">
                             <button type="button" class="btn btn-md btn-outline-light" onclick="hide()"><i
-                                class="bi bi-toggles"></i> Toggle Cards</button>
+                                    class="bi bi-toggles"></i> Toggle Cards</button>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Language</span>
                             </div>
@@ -123,7 +142,7 @@
                     <div class="col">
                         <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
-                            <img src="res/images/cards/temp.jpg" alt="">
+                            <img src="res/images/cards/temp.jpg" alt="Loading image...">
 
                             <div class="card-body">
                                 <p class="card-text">Loading... </p>
@@ -143,7 +162,7 @@
                     <div class="col">
                         <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
-                            <img src="res/images/cards/temp.jpg" alt="">
+                            <img src="res/images/cards/temp.jpg" alt="Loading image...">
 
                             <div class="card-body">
                                 <p class="card-text">Loading... </p>
@@ -163,7 +182,7 @@
                     <div class="col">
                         <div class="card shadow-sm text-white bg-dark" id="card-loading">
                             <div class="card-header">Loading...</div>
-                            <img src="res/images/cards/temp.jpg" alt="">
+                            <img src="res/images/cards/temp.jpg" alt="Loading image...">
 
                             <div class="card-body">
                                 <p class="card-text">Loading... </p>
@@ -182,7 +201,7 @@
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 card-content" id="card-content">
-                    
+
                 </div>
             </div>
         </div>
@@ -211,7 +230,7 @@
 
         function load() {
             console.log('Loading cards');
-            var delay = 300;
+            var delay = 0;
             $('#card-container').html('');
             $.each(cards, function (i, item) {
                 $('#card-container').append(`
@@ -235,7 +254,7 @@
                         </div>
                     </div>
                 `);
-                if(i % 3 == 0){
+                if (i % 3 == 0) {
                     delay += 300;
                 }
                 $("#card-" + i).hide();
@@ -245,26 +264,26 @@
 
         function hide() {
             hide_works();
-            var delay = 300;
+            var delay = 0;
             $.each(cards, function (i, item) {
-                if(i % 3 == 0){
+                if (i % 3 == 0) {
                     delay += 300;
                 }
                 $("#card-" + i).slideToggle(delay);
             });
         }
 
-        function hide_works(){
+        function hide_works() {
             var delay = 150;
             $.each(get_works_category(current_category), function (i, item) {
-                if(i % 2 == 0){
+                if (i % 2 == 0) {
                     delay += 150;
                 }
                 $("#card-works-" + i).fadeOut(delay);
             });
         }
 
-        function load_works(category){
+        function load_works(category) {
             hide();
             var temp = get_works_category(category);
             current_category = category;
@@ -281,7 +300,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text text-info">Codeigniter PHP MySQL</small>
+                                    <small class="text text-info">` + item.tools + `</small>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -298,55 +317,55 @@
             });
         }
 
-        function status_color(status){
-            if(status == 'PUBLIC'){
+        function status_color(status) {
+            if (status == 'PUBLIC') {
                 return 'success';
             }
-            else if(status == 'UNDOCUMENTED'){
+            else if (status == 'UNDOCUMENTED') {
                 return 'warning';
             }
-            else if(status == 'CONFIDENTIAL'){
+            else if (status == 'CONFIDENTIAL') {
                 return 'danger';
             }
-            else{
+            else {
                 return 'info';
             }
         }
 
-        function get_works_category(category){
-            if(category == 'web_programming'){
+        function get_works_category(category) {
+            if (category == 'web_programming') {
                 return works.web_programming;
             }
-            else if(category == 'tech_support'){
+            else if (category == 'tech_support') {
                 return works.tech_support;
             }
         }
 
-        function create_button(link){
+        function create_button(link) {
             var hypertext = '';
-            if(link.gallery != '#'){
-                hypertext += `<a href="` + link.gallery + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-picture"></i> Gallery</button></a>`;
+            if (link.gallery != '#') {
+                hypertext += `<a href="` + link.gallery + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-image"></i> Gallery</button></a>`;
             }
-            if(link.github != '#'){
+            if (link.github != '#') {
                 hypertext += `<a href="` + link.github + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i> Github</button></a>`;
             }
-            if(link.website != '#'){
+            if (link.website != '#') {
                 hypertext += `<a href="` + link.website + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i> Website</button></a>`;
             }
-            if(link.youtube != '#'){
+            if (link.youtube != '#') {
                 hypertext += `<a href="` + link.youtube + `" target="_blank"><button type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i> Youtube</button></a>`;
             }
             return hypertext;
         }
 
-        function get_language(list, code){
-            if(code == 'EN'){
+        function get_language(list, code) {
+            if (code == 'EN') {
                 return list.en;
             }
-            else if(code == 'ID'){
+            else if (code == 'ID') {
                 return list.id;
             }
-            else{
+            else {
                 return 'List Error.';
             }
         }
@@ -378,6 +397,10 @@
                     $('#card-works-description-' + i).fadeIn(300);
                 });
             }
+        });
+
+        $("#discord-username").click( function(){
+            $(this).html() == "Mediocrates#4948" ? $(this).html('<i class="bi bi-discord"></i> Discord') : $(this).html('Mediocrates#4948');
         });
     </script>
 </body>

@@ -2,10 +2,13 @@
     "web_programming" :[
         {
             "title": "Office Internal Memo System",
-            "thumbnail": "res/images/web_programming/iom.png",
-            "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
-            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "thumbnail": "res/images/works/web_programming/iom.png",
+            "description": {
+                "en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
+                "id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang."
+            },
             "status": "CONFIDENTIAL",
+            "tools": "PHP CI CSS JS JQuery",
             "link": {
                 "gallery": "#",
                 "github": "#",
@@ -15,10 +18,13 @@
         },
         {
             "title": "Modular Website for IoT System",
-            "thumbnail": "res/images/web_programming/modweb.PNG",
-            "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
-            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "thumbnail": "res/images/works/web_programming/modweb.PNG",
+            "description": {
+                "en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
+                "id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang."
+            },
             "status": "PUBLIC",
+            "tools": "PHP CI CSS ESP8266",
             "link": {
                 "gallery": "#",
                 "github": "#",
@@ -28,13 +34,16 @@
         },
         {
             "title": "Diagnosis+ Disease Weighing System",
-            "thumbnail": "res/images/web_programming/diagnosis.PNG",
-            "description_en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
-            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
+            "thumbnail": "res/images/works/web_programming/diagnosis.PNG",
+            "description": {
+                "en": "Created to receive and process data, sending commands to the IoT Device, the device will check regularly for new command once finished it will send an affirmation to the webserver to be tagged as finished. Supports graphs and other display system for sensor data.",
+                "id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang."
+            },
             "status": "UNDOCUMENTED",
+            "tools": "PHP CI JS JQuery",
             "link": {
-                "gallery": "#",
-                "github": "#",
+                "gallery": "https://files.catbox.moe/jdzln8.png",
+                "github": "https://github.com/AdmiralPuni",
                 "website": "https://modularserver.000webhostapp.com/",
                 "youtube": "https://www.youtube.com/feed/subscriptions"
             }
@@ -42,13 +51,16 @@
     ],
     "tech_support": [
         {
-            "title": "Tech Support EX",
-            "thumbnail": "res/images/cards/web_programming.jpg",
-            "description_en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
-            "description_id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang.",
-            "status": "CONFIDENTIAL",
+            "title": "Maintenance",
+            "thumbnail": "res/images/works/tech_support/asus_maintenance.jpg",
+            "description": {
+                "en": "Website to order memos around the office according to the department of the requester, the memo requires to be approved by user with level 1 and level 2 clearance timestamp is generated when both is cleared. Items of the memo is managed by the administrator.",
+                "id": "Ini adalah kartu yang lebih lebar dengan teks pendukung di bawah sebagai petunjuk alami untuk konten tambahan. Konten ini lebih panjang."
+            },
+            "status": "PUBLIC",
+            "tools": "System-Maintenance",
             "link": {
-                "gallery": "%",
+                "gallery": "#",
                 "github": "#",
                 "website": "https://modularserver.000webhostapp.com/",
                 "youtube": "https://www.youtube.com/feed/subscriptions"

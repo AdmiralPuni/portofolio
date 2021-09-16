@@ -109,6 +109,8 @@
                         <div class="input-group">
                             <button type="button" class="btn btn-md btn-outline-light" onclick="hide()"><i
                                 class="bi bi-toggles"></i> Toggle Cards</button>
+                            <button type="button" class="btn btn-md btn-outline-light" onclick="load()"><i
+                                class="bi bi-toggles"></i> Load</button>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Language</span>
                             </div>
@@ -191,22 +193,26 @@
     <script src="res/js/jquery-3.6.0.min.js"></script>
     <script src="res/js/bootstrap.min.js"></script>
     <script>
-        //ADD LANGUAGE FUNCTION JSON
+        console.log('Starting custom script');
         var cards;
         var works;
 
         var current_category;
+        var current_language = 'EN';
 
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/cards.json', function (data) {
             cards = data;
+            console.log('Card data loaded');
             load();
         });
         $.getJSON('https://raw.githubusercontent.com/AdmiralPuni/portofolio/main/res/data/works.json', function (data) {
             works = data;
+            console.log('Work data loaded');
         });
 
 
         function load() {
+            console.log('Loading cards');
             var delay = 300;
             $('#card-container').html('');
             $.each(cards, function (i, item) {
@@ -217,7 +223,7 @@
                             <img src="` + item.thumbnail + `" alt="">
 
                             <div class="card-body">
-                                <p class="card-text" id="card-description-` + i + `">` + item.description_en + `</p>
+                                <p class="card-text" id="card-description-` + i + `">` + get_language(item.description, current_language) + `</p>
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -273,7 +279,7 @@
                             <img src="` + item.thumbnail + `" alt="">
 
                             <div class="card-body">
-                                <p class="card-text" id="card-works-description-` + i + `">` + item.description_en + `</p>
+                                <p class="card-text" id="card-works-description-` + i + `">` + get_language(item.description, current_language) + `</p>
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -335,27 +341,41 @@
             return hypertext;
         }
 
+        function get_language(list, code){
+            if(code == 'EN'){
+                return list.en;
+            }
+            else if(code == 'ID'){
+                return list.id;
+            }
+            else{
+                return 'List Error.';
+            }
+        }
+
         $('#language').on('change', function () {
             if (this.value == 'EN') {
+                current_language = 'EN';
                 $.each(cards, function (i, item) {
-                    $('#card-description-' + i).html(item.description_en);
+                    $('#card-description-' + i).html(item.description.en);
                     $('#card-description-' + i).hide();
                     $('#card-description-' + i).fadeIn(300);
                 });
                 $.each(get_works_category(current_category), function (i, item) {
-                    $('#card-works-description-' + i).html(item.description_en);
+                    $('#card-works-description-' + i).html(item.description.en);
                     $('#card-works-description-' + i).hide();
                     $('#card-works-description-' + i).fadeIn(300);
                 });
             }
             else if (this.value == 'ID') {
+                current_language = 'ID';
                 $.each(cards, function (i, item) {
-                    $('#card-description-' + i).html(item.description_id);
+                    $('#card-description-' + i).html(item.description.id);
                     $('#card-description-' + i).hide();
                     $('#card-description-' + i).fadeIn(300);
                 });
                 $.each(get_works_category(current_category), function (i, item) {
-                    $('#card-works-description-' + i).html(item.description_id);
+                    $('#card-works-description-' + i).html(item.description.id);
                     $('#card-works-description-' + i).hide();
                     $('#card-works-description-' + i).fadeIn(300);
                 });

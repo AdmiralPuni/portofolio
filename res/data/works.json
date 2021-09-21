@@ -50,7 +50,7 @@
         },
         {
             "title": "Manajemen Distribusi KTP/KIA",
-            "thumbnail": "res/images/works/web_programming/mktp.PNG",
+            "thumbnail": "res/images/works/web_programming/mktp.png",
             "description": {
                 "en": "Managing distribution of ID card, the owner of the card can modify their data for correction.",
                 "id": "Missing translation"
